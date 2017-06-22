@@ -17,6 +17,9 @@ module.exports = {
   {{/if_eq}}
   rules: {
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'semi': [1,'always'],
+    'no-multiple-empty-lines': [1,{'max':4}],
+    'no-trailing-spaces': [1,{'skipBlankLines':true}]
   }
 }

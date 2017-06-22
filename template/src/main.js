@@ -1,21 +1,26 @@
-import 'pixi'
-import 'p2'
-import Phaser from 'phaser'
+import config from './config';
 
-import Boot from './states/Boot'
-import Preloader from './states/Preloader'
-import Play from './states/Play'
+// --------------------------------------------------------------
+// Vue
+// --------------------------------------------------------------
+import Vue from 'vue';
+// Import Vue Components ....
+import topbar from './vue/ui/TopBar.vue';
 
-class Game extends Phaser.Game {
-  constructor () {
-    super(1024, 768, Phaser.AUTO, 'game')
 
-    this.state.add('Boot', Boot)
-    this.state.add('Preloader', Preloader)
-    this.state.add('Play', Play)
 
-    this.state.start('Boot')
+// --------------------------------------------------------------
+// Init Phaser Game
+// --------------------------------------------------------------
+import Game from './phaser/Game.js';
+window.game = new Game();
+
+// --------------------------------------------------------------
+// Init Vue
+// --------------------------------------------------------------
+window.ui = new Vue({
+	el: window.options.vueUID,
+  components: {
+    topbar
   }
-}
-
-window.game = new Game()
+});

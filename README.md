@@ -1,6 +1,6 @@
 # webpack
 
-> A Phaser Webpack setup
+> A Phaser & Vue Webpack setup
 
 ### Usage
 
