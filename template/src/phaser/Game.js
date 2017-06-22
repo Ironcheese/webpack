@@ -15,7 +15,7 @@ import Outro from './states/Outro';
 
 export default class Game extends Phaser.Game {
   constructor () {
-    super(config.gameWidth, config.gameHeight, Phaser.AUTO, window.options.phaserID, null, false);
+    super(config.gameMaxWidth, config.gameMaxHeight, Phaser.AUTO, window.options.phaserID, null, false);
 
     // Params: Key, StateObject, autoStart
     this.state.add('Boot', Boot, false);
