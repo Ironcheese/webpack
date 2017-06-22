@@ -6,11 +6,11 @@ import config from '../config';
 // --------------------------------------------------------------
 import Phaser from 'phaser';
 
-import Boot from './phaser/states/Boot';
-import Preload from './phaser/states/Preloader';
-import Intro from './phaser/states/Intro';
-import Play from './phaser/states/Play';
-import Outro from './phaser/states/Outro';
+import Boot from './states/Boot';
+import Preload from './states/Preloader';
+import Intro from './states/Intro';
+import Play from './states/Play';
+import Outro from './states/Outro';
 
 
 export default class Game extends Phaser.Game {
