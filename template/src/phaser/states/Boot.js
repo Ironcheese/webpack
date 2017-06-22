@@ -26,7 +26,7 @@ export default class Boot extends Phaser.State {
   preload () {
     this.load.crossOrigin = 'anonymous';
     // Load anything you need for the preloader (e.g. loading bars) here
-    this.load.image("background_preload", window.options.preloadBG);
+    this.load.image('background_preload', window.options.preloadBG);
   }
 
   create () {

@@ -15,7 +15,9 @@
     <!-- @Todo: NoScript Fallback -->
     <!-- @Todo: Old Browser Fallback -->
     <div id="PHASER_CANVAS"></div>
-    <div id="ui"></div>
+    <div id="UI">
+        <topbar></topbar>
+    </div>
 
     <!-- Config and Asset Manifest -->
     <script>
@@ -23,7 +25,9 @@
             // Alles Images
             // id, image-path
             image: {
-              "background_preload": "./assets/images/loader-bar.png"
+              "background_intro": "/assets/images/background_intro.jpg",
+              "background_game": "/assets/images/background_game.jpg",
+              "background_end": "/assets/images/background_end.jpg"
             },
             // Spritesheets
             // id, image-path, width, height
@@ -42,7 +46,8 @@
         // ----------------------------------------------------------------------------
         var options = {
           phaserID: "PHASER_CANVAS",
-          splashBG: "./assets/background_splash.jpg",
+          vueID: '#UI',
+          preloadBG: "./assets/images/background_preload.jpg",
 
           action: {
             href: "http://example.org",

@@ -1,6 +1,6 @@
 <template> 
 <div class="top-bar-wrapper">
-    {{ name }}
+    <span>{{ name }}</span>
 </div>
 </template>
 
@@ -15,8 +15,12 @@ export default {
 }    
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .top-bar-wrapper {
     color:red;
+
+    span {
+    	color: blue;
+    }
 }
 </style>

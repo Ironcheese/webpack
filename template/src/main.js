@@ -1,5 +1,4 @@
-import config from './config';
-
+import Game from './phaser/Game.js';
 // --------------------------------------------------------------
 // Vue
 // --------------------------------------------------------------
@@ -7,20 +6,26 @@ import Vue from 'vue';
 // Import Vue Components ....
 import topbar from './vue/ui/TopBar.vue';
 
+// --------------------------------------------------------------
+// Game Data
+// --------------------------------------------------------------
+const gameData = {
+  foo: 'bar'
+};
 
 
 // --------------------------------------------------------------
 // Init Phaser Game
 // --------------------------------------------------------------
-import Game from './phaser/Game.js';
 window.game = new Game();
 
 // --------------------------------------------------------------
 // Init Vue
 // --------------------------------------------------------------
 window.ui = new Vue({
-	el: window.options.vueUID,
+  el: window.options.vueID,
   components: {
     topbar
-  }
+  },
+  data: gameData
 });
