@@ -1,7 +1,7 @@
 import Phaser from 'phaser-ce'
 
 import WebFont from 'webfontloader';
-import config from '../config';
+import config from '../../config';
 /**
  * Preload 
  * 
@@ -19,7 +19,7 @@ export default class Preload extends Phaser.State {
 
   preload () {
     const assets = window.assets;
-    this.background = this.add.image(0, 0, "background_splash");
+    this.background = this.add.image(0, 0, "background_preload");
     this.load.onLoadComplete.add(this.handleLoadComplete, this);
 
     //

@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import config from '../config';
+import config from '../../config';
 /**
  * Boot State
  *
@@ -12,12 +12,12 @@ export default class Boot extends Phaser.State {
     this.stage.disableVisibilityChange = true;
 
     // Recommended to leave as 1 unless you need multi-touch support
-    this.input.maxPointers = 1
+    this.input.maxPointers = 1;
     
     // Scale
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
-    //this.scale.refresh();
+    // this.scale.refresh();
     this.scale.pageAlignVertically = true;
     this.scale.pageAlignHorizontally = true;
     this.scale.setMinMax(config.gameMinWidth, config.gameMinHeight, config.gameMaxWidth, config.gameMaxHeight);
@@ -30,6 +30,6 @@ export default class Boot extends Phaser.State {
   }
 
   create () {
-    this.state.start('Preload')
+    this.state.start('Preload');
   }
 }

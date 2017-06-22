@@ -7,7 +7,7 @@ import config from '../config';
 import Phaser from 'phaser';
 
 import Boot from './states/Boot';
-import Preload from './states/Preloader';
+import Preload from './states/Preload';
 import Intro from './states/Intro';
 import Play from './states/Play';
 import Outro from './states/Outro';
